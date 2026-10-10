@@ -1,0 +1,9 @@
+**/*.csv
+**/*.zip
+*.tar.gz
+
+iot-malware-dataset/
+UNSW_IoT/
+cic_iot_dataset2022/
+
+.venv/
