@@ -1,0 +1,278 @@
+{
+  "ordered_parquet_sha256": "1ca1ac58d3f8a53d7ea2a54dd1cbf1805549c8acbf7bd9f515efd0ff7d1d3177",
+  "classes": [
+    "Doorbell",
+    "IP Camera",
+    "Smart Camera",
+    "Smart Hub",
+    "Smart Plug",
+    "Smart Speaker"
+  ],
+  "seed": 42,
+  "device": "cpu",
+  "threads": 4,
+  "epochs_limit": 5,
+  "batch_size": 256,
+  "optimizer": "Adam",
+  "learning_rate": 0.001,
+  "early_stopping_patience": 2,
+  "versions": {
+    "numpy": "2.5.4",
+    "polars": "2.1.0",
+    "torch": "2.15.0"
+  },
+  "history_length_including_target": 20,
+  "hidden_size": 64,
+  "numeric_features": [
+    "total_packets",
+    "total_bytes",
+    "avg_packet_size",
+    "gap_seconds"
+  ],
+  "numeric_log_mean": [
+    1.483054757118225,
+    6.068344593048096,
+    4.945823669433594,
+    1.7253168821334839
+  ],
+  "numeric_log_scale": [
+    0.7353090643882751,
+    2.2227463722229004,
+    1.4018189907073975,
+    1.4687680006027222
+  ],
+  "port_features": [
+    "src_port",
+    "dst_port"
+  ],
+  "protocols": [
+    "TCP",
+    "UDP",
+    "ICMP",
+    "OTHER"
+  ],
+  "train_per_type_limit": 20000,
+  "validation_per_type_limit": 4000,
+  "train_endpoint_counts": [
+    20000,
+    20000,
+    20000,
+    20000,
+    20000,
+    20000
+  ],
+  "validation_endpoint_counts": [
+    4000,
+    4000,
+    4000,
+    4000,
+    4000,
+    4000
+  ],
+  "models": {
+    "ordered": {
+      "best_epoch": 5,
+      "validation_macro_f1": 0.975608526726225,
+      "epochs": [
+        {
+          "epoch": 1,
+          "loss": 0.28399300985733666,
+          "validation_macro_f1": 0.9632198592656657,
+          "validation_accuracy": 0.96325
+        },
+        {
+          "epoch": 2,
+          "loss": 0.028755714447796343,
+          "validation_macro_f1": 0.9679004889918993,
+          "validation_accuracy": 0.9679166666666666
+        },
+        {
+          "epoch": 3,
+          "loss": 0.019918025050808984,
+          "validation_macro_f1": 0.9709510995915923,
+          "validation_accuracy": 0.9709583333333334
+        },
+        {
+          "epoch": 4,
+          "loss": 0.015681835855108996,
+          "validation_macro_f1": 0.9739705931095434,
+          "validation_accuracy": 0.9739583333333334
+        },
+        {
+          "epoch": 5,
+          "loss": 0.01411126582014064,
+          "validation_macro_f1": 0.975608526726225,
+          "validation_accuracy": 0.9757083333333333
+        }
+      ],
+      "test": {
+        "macro_f1": 0.2889714623944614,
+        "accuracy": 0.23936433960835465,
+        "per_class_f1": [
+          0.015529219452390683,
+          0.868982798796267,
+          0.0,
+          0.6946039133819868,
+          0.004961100462284361,
+          0.14975174227383964
+        ],
+        "confusion_matrix": [
+          [
+            19,
+            0,
+            46,
+            1003,
+            0,
+            37
+          ],
+          [
+            8,
+            37106,
+            38,
+            224,
+            10395,
+            236
+          ],
+          [
+            0,
+            0,
+            0,
+            11201,
+            0,
+            40
+          ],
+          [
+            12,
+            0,
+            37,
+            40593,
+            0,
+            2270
+          ],
+          [
+            66,
+            131,
+            59599,
+            378,
+            176,
+            2
+          ],
+          [
+            1237,
+            157,
+            203689,
+            20570,
+            29,
+            20102
+          ]
+        ]
+      }
+    },
+    "shuffled": {
+      "best_epoch": 5,
+      "validation_macro_f1": 0.9872432540597792,
+      "epochs": [
+        {
+          "epoch": 1,
+          "loss": 0.28737385416229566,
+          "validation_macro_f1": 0.9557483654505741,
+          "validation_accuracy": 0.9557916666666667
+        },
+        {
+          "epoch": 2,
+          "loss": 0.03458856042424838,
+          "validation_macro_f1": 0.9673059389311996,
+          "validation_accuracy": 0.9673333333333334
+        },
+        {
+          "epoch": 3,
+          "loss": 0.02315396659076214,
+          "validation_macro_f1": 0.9722058786570336,
+          "validation_accuracy": 0.9721666666666666
+        },
+        {
+          "epoch": 4,
+          "loss": 0.018572655796445906,
+          "validation_macro_f1": 0.9841157361498184,
+          "validation_accuracy": 0.984125
+        },
+        {
+          "epoch": 5,
+          "loss": 0.016486278517295918,
+          "validation_macro_f1": 0.9872432540597792,
+          "validation_accuracy": 0.98725
+        }
+      ],
+      "test": {
+        "macro_f1": 0.2845268158691751,
+        "accuracy": 0.22321391496356874,
+        "per_class_f1": [
+          0.0002374403925681157,
+          0.9023358223243346,
+          0.0,
+          0.7282905487322756,
+          0.0004590239184248922,
+          0.07583805984744768
+        ],
+        "confusion_matrix": [
+          [
+            6,
+            0,
+            54,
+            1013,
+            0,
+            32
+          ],
+          [
+            18,
+            47129,
+            13,
+            143,
+            631,
+            73
+          ],
+          [
+            0,
+            459,
+            0,
+            10781,
+            0,
+            1
+          ],
+          [
+            30,
+            8223,
+            53,
+            34541,
+            0,
+            65
+          ],
+          [
+            42583,
+            258,
+            17138,
+            358,
+            14,
+            1
+          ],
+          [
+            6797,
+            384,
+            223800,
+            5107,
+            2,
+            9694
+          ]
+        ]
+      }
+    }
+  },
+  "test_endpoint_counts": [
+    1105,
+    48007,
+    11241,
+    42912,
+    60352,
+    245784
+  ]
+}

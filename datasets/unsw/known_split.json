@@ -1,0 +1,250 @@
+{
+  "parquet_sha256": "81cdd98252475d68cbadaebac9042e2ea9fc73639f2dd38f2114b8954c8705a3",
+  "source_flows": 4944041,
+  "excluded_timestamps": 8,
+  "devices": [
+    {
+      "device_id": "unsw_amazon_echo",
+      "device_type": "Smart Speaker",
+      "train": 147470,
+      "validation": 49157,
+      "test": 49157,
+      "validation_start": "2016-11-19 11:05:31.128577+00:00",
+      "test_start": "2016-12-04 01:37:07.668037+00:00"
+    },
+    {
+      "device_id": "unsw_august_doorbell",
+      "device_type": "Doorbell",
+      "train": 679364,
+      "validation": 226455,
+      "test": 226455,
+      "validation_start": "2017-02-16 02:57:29.815671+00:00",
+      "test_start": "2017-03-16 18:12:09.361904+00:00"
+    },
+    {
+      "device_id": "unsw_awair_air_quality",
+      "device_type": "Air Quality Sensor",
+      "train": 2643,
+      "validation": 881,
+      "test": 882,
+      "validation_start": "2016-11-25 21:35:08.739650+00:00",
+      "test_start": "2016-12-01 04:46:37.047413+00:00"
+    },
+    {
+      "device_id": "unsw_belkin_camera",
+      "device_type": "IP Camera",
+      "train": 39101,
+      "validation": 13034,
+      "test": 13034,
+      "validation_start": "2017-03-06 14:39:53.276993+00:00",
+      "test_start": "2017-03-12 10:40:13.338165+00:00"
+    },
+    {
+      "device_id": "unsw_belkin_wemo_motion_sensor",
+      "device_type": "Motion Sensor",
+      "train": 408141,
+      "validation": 136047,
+      "test": 136047,
+      "validation_start": "2016-11-18 12:05:56.651503+00:00",
+      "test_start": "2017-01-13 23:30:46.206021+00:00"
+    },
+    {
+      "device_id": "unsw_belkin_wemo_switch",
+      "device_type": "Smart Plug",
+      "train": 294337,
+      "validation": 98112,
+      "test": 98113,
+      "validation_start": "2016-11-21 22:59:32.025998+00:00",
+      "test_start": "2017-01-09 13:30:30.264378+00:00"
+    },
+    {
+      "device_id": "unsw_blipcare_bp_meter",
+      "device_type": "Blood Pressure Monitor",
+      "train": 32,
+      "validation": 11,
+      "test": 11,
+      "validation_start": "2017-04-06 13:03:11.210922+00:00",
+      "test_start": "2017-04-07 11:41:16.474768+00:00"
+    },
+    {
+      "device_id": "unsw_canary_camera",
+      "device_type": "Smart Camera",
+      "train": 3959,
+      "validation": 1319,
+      "test": 1320,
+      "validation_start": "2017-03-03 15:44:39.369137+00:00",
+      "test_start": "2017-03-04 09:26:33.905470+00:00"
+    },
+    {
+      "device_id": "unsw_hello_barbie",
+      "device_type": "Smart Toy",
+      "train": 90,
+      "validation": 30,
+      "test": 30,
+      "validation_start": "2017-03-24 05:58:37.566825+00:00",
+      "test_start": "2017-04-07 11:23:07.896581+00:00"
+    },
+    {
+      "device_id": "unsw_hp_printer",
+      "device_type": "Printer",
+      "train": 356787,
+      "validation": 118929,
+      "test": 118930,
+      "validation_start": "2017-01-02 22:18:30.061902+00:00",
+      "test_start": "2017-03-01 13:45:20.868641+00:00"
+    },
+    {
+      "device_id": "unsw_ihome",
+      "device_type": "Smart Plug",
+      "train": 36211,
+      "validation": 12070,
+      "test": 12071,
+      "validation_start": "2017-01-03 14:21:03.048142+00:00",
+      "test_start": "2017-02-02 22:33:11.728755+00:00"
+    },
+    {
+      "device_id": "unsw_lifx_bulb",
+      "device_type": "Smart Bulb",
+      "train": 61219,
+      "validation": 20406,
+      "test": 20407,
+      "validation_start": "2016-11-25 04:35:41.854441+00:00",
+      "test_start": "2017-03-27 10:12:49.176521+00:00"
+    },
+    {
+      "device_id": "unsw_nest_dropcam",
+      "device_type": "Smart Camera",
+      "train": 1262,
+      "validation": 421,
+      "test": 421,
+      "validation_start": "2016-12-30 17:27:23.075035+00:00",
+      "test_start": "2017-02-23 08:49:13.188361+00:00"
+    },
+    {
+      "device_id": "unsw_nest_protect",
+      "device_type": "Smoke Detector",
+      "train": 154173,
+      "validation": 51391,
+      "test": 51392,
+      "validation_start": "2017-03-02 09:05:48.637567+00:00",
+      "test_start": "2017-03-02 09:06:52.471040+00:00"
+    },
+    {
+      "device_id": "unsw_netatmo_weather_station",
+      "device_type": "Weather Station",
+      "train": 47327,
+      "validation": 15776,
+      "test": 15776,
+      "validation_start": "2017-01-23 05:54:01.245271+00:00",
+      "test_start": "2017-03-21 12:08:16.261770+00:00"
+    },
+    {
+      "device_id": "unsw_netatmo_welcome",
+      "device_type": "Smart Camera",
+      "train": 189584,
+      "validation": 63195,
+      "test": 63195,
+      "validation_start": "2017-01-04 07:56:01.624567+00:00",
+      "test_start": "2017-01-27 20:20:09.309140+00:00"
+    },
+    {
+      "device_id": "unsw_philips_hue",
+      "device_type": "Smart Hub",
+      "train": 181258,
+      "validation": 60419,
+      "test": 60420,
+      "validation_start": "2017-03-28 04:52:30.090066+00:00",
+      "test_start": "2017-04-08 23:09:00.076023+00:00"
+    },
+    {
+      "device_id": "unsw_pix_star_photo_frame",
+      "device_type": "Photo Frame",
+      "train": 9215,
+      "validation": 3071,
+      "test": 3072,
+      "validation_start": "2017-03-03 23:58:02.967923+00:00",
+      "test_start": "2017-03-07 04:39:20.627181+00:00"
+    },
+    {
+      "device_id": "unsw_ring_doorbell",
+      "device_type": "Doorbell",
+      "train": 663,
+      "validation": 221,
+      "test": 221,
+      "validation_start": "2017-04-05 21:08:41.890714+00:00",
+      "test_start": "2017-04-09 20:19:03.611344+00:00"
+    },
+    {
+      "device_id": "unsw_samsung_camera",
+      "device_type": "IP Camera",
+      "train": 227952,
+      "validation": 75984,
+      "test": 75985,
+      "validation_start": "2016-11-24 13:24:32.012815+00:00",
+      "test_start": "2017-03-04 23:43:31.341258+00:00"
+    },
+    {
+      "device_id": "unsw_samsung_smartthings",
+      "device_type": "Smart Hub",
+      "train": 25747,
+      "validation": 8582,
+      "test": 8583,
+      "validation_start": "2017-01-02 07:22:09.768263+00:00",
+      "test_start": "2017-04-06 12:10:24.300566+00:00"
+    },
+    {
+      "device_id": "unsw_tp_link_camera",
+      "device_type": "IP Camera",
+      "train": 28804,
+      "validation": 9601,
+      "test": 9602,
+      "validation_start": "2017-03-28 05:50:27.797230+00:00",
+      "test_start": "2017-04-06 05:02:26.045225+00:00"
+    },
+    {
+      "device_id": "unsw_tp_link_smart_plug",
+      "device_type": "Smart Plug",
+      "train": 7689,
+      "validation": 2563,
+      "test": 2564,
+      "validation_start": "2016-11-28 10:37:46.885030+00:00",
+      "test_start": "2016-12-03 23:30:49.964404+00:00"
+    },
+    {
+      "device_id": "unsw_triby_speaker",
+      "device_type": "Smart Speaker",
+      "train": 30990,
+      "validation": 10330,
+      "test": 10330,
+      "validation_start": "2017-01-19 14:10:04.430803+00:00",
+      "test_start": "2017-02-05 06:16:06.543253+00:00"
+    },
+    {
+      "device_id": "unsw_withings_baby_monitor",
+      "device_type": "Smart Camera",
+      "train": 6744,
+      "validation": 2248,
+      "test": 2249,
+      "validation_start": "2016-10-02 02:12:16.807252+00:00",
+      "test_start": "2016-10-04 17:23:17.789675+00:00"
+    },
+    {
+      "device_id": "unsw_withings_sleep_sensor",
+      "device_type": "Sleep Sensor",
+      "train": 24732,
+      "validation": 8244,
+      "test": 8245,
+      "validation_start": "2017-01-04 08:58:49.334026+00:00",
+      "test_start": "2017-02-23 05:28:29.365759+00:00"
+    },
+    {
+      "device_id": "unsw_withings_smart_scale",
+      "device_type": "Smart Scale",
+      "train": 918,
+      "validation": 306,
+      "test": 306,
+      "validation_start": "2017-01-24 13:12:10.134342+00:00",
+      "test_start": "2017-03-05 22:33:29.192453+00:00"
+    }
+  ]
+}
