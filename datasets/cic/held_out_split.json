@@ -1,0 +1,359 @@
+{
+  "parquet_sha256": "fe42c53e4090a60aca6217e45b152fe98a3dcaf397eaded56ea54762beea6524",
+  "test_assignment_seed": 42,
+  "devices": [
+    {
+      "device_type": "IP Camera",
+      "device_id": "cic_amcrestcam",
+      "cutoff_us": 1634044946093836,
+      "windows": 1283,
+      "train_windows": 1019,
+      "validation_windows": 257,
+      "role": "train_validation"
+    },
+    {
+      "device_type": "IP Camera",
+      "device_id": "cic_boruncam",
+      "cutoff_us": 1634129823810809,
+      "windows": 417,
+      "train_windows": 329,
+      "validation_windows": 84,
+      "role": "train_validation"
+    },
+    {
+      "device_type": "IP Camera",
+      "device_id": "cic_dlinkcam",
+      "cutoff_us": 1634040461955530,
+      "windows": 827,
+      "train_windows": 658,
+      "validation_windows": 166,
+      "role": "train_validation"
+    },
+    {
+      "device_type": "IP Camera",
+      "device_id": "cic_heimvisioncam",
+      "cutoff_us": 1634047148701260,
+      "windows": 1003,
+      "train_windows": 795,
+      "validation_windows": 201,
+      "role": "train_validation"
+    },
+    {
+      "device_type": "IP Camera",
+      "device_id": "cic_homeeyecam",
+      "cutoff_us": 1634043918557702,
+      "windows": 1906,
+      "train_windows": 1522,
+      "validation_windows": 382,
+      "role": "train_validation"
+    },
+    {
+      "device_type": "IP Camera",
+      "device_id": "cic_luohecam",
+      "cutoff_us": 1634130264607266,
+      "windows": 1046,
+      "train_windows": 834,
+      "validation_windows": 210,
+      "role": "test"
+    },
+    {
+      "device_type": "Smart Bulb",
+      "device_id": "cic_globelamp",
+      "cutoff_us": 1633692679507637,
+      "windows": 254,
+      "train_windows": 202,
+      "validation_windows": 51,
+      "role": "test"
+    },
+    {
+      "device_type": "Smart Bulb",
+      "device_id": "cic_heimvisionlamp",
+      "cutoff_us": 1633702337943152,
+      "windows": 174,
+      "train_windows": 139,
+      "validation_windows": 35,
+      "role": "train_validation"
+    },
+    {
+      "device_type": "Smart Bulb",
+      "device_id": "cic_philipshue",
+      "cutoff_us": 1633537475111029,
+      "windows": 211,
+      "train_windows": 168,
+      "validation_windows": 43,
+      "role": "train_validation"
+    },
+    {
+      "device_type": "Smart Camera",
+      "device_id": "cic_arloqcam",
+      "cutoff_us": 1634042727516065,
+      "windows": 1218,
+      "train_windows": 969,
+      "validation_windows": 244,
+      "role": "train_validation"
+    },
+    {
+      "device_type": "Smart Camera",
+      "device_id": "cic_nestcam",
+      "cutoff_us": 1634059650148241,
+      "windows": 380,
+      "train_windows": 303,
+      "validation_windows": 76,
+      "role": "test"
+    },
+    {
+      "device_type": "Smart Camera",
+      "device_id": "cic_netatmocam",
+      "cutoff_us": 1633542037645738,
+      "windows": 553,
+      "train_windows": 440,
+      "validation_windows": 111,
+      "role": "train_validation"
+    },
+    {
+      "device_type": "Smart Camera",
+      "device_id": "cic_simcam",
+      "cutoff_us": 1634046463494487,
+      "windows": 1890,
+      "train_windows": 1506,
+      "validation_windows": 378,
+      "role": "train_validation"
+    },
+    {
+      "device_type": "Smart Hub",
+      "device_id": "cic_arlobasestationcam",
+      "cutoff_us": 1634134770483415,
+      "windows": 1247,
+      "train_windows": 995,
+      "validation_windows": 250,
+      "role": "train_validation"
+    },
+    {
+      "device_type": "Smart Hub",
+      "device_id": "cic_eufyhomebase",
+      "cutoff_us": 1634136125184823,
+      "windows": 821,
+      "train_windows": 653,
+      "validation_windows": 165,
+      "role": "test"
+    },
+    {
+      "device_type": "Smart Plug",
+      "device_id": "cic_amazonplug",
+      "cutoff_us": 1633441029681514,
+      "windows": 81,
+      "train_windows": 64,
+      "validation_windows": 17,
+      "role": "train_validation"
+    },
+    {
+      "device_type": "Smart Plug",
+      "device_id": "cic_teckin1",
+      "cutoff_us": 1633529674202963,
+      "windows": 90,
+      "train_windows": 72,
+      "validation_windows": 18,
+      "role": "train_validation"
+    },
+    {
+      "device_type": "Smart Plug",
+      "device_id": "cic_teckin2",
+      "cutoff_us": 1633530312331557,
+      "windows": 90,
+      "train_windows": 72,
+      "validation_windows": 18,
+      "role": "test"
+    },
+    {
+      "device_type": "Smart Plug",
+      "device_id": "cic_yutron1",
+      "cutoff_us": 1633696629807713,
+      "windows": 90,
+      "train_windows": 72,
+      "validation_windows": 18,
+      "role": "train_validation"
+    },
+    {
+      "device_type": "Smart Plug",
+      "device_id": "cic_yutron2",
+      "cutoff_us": 1633697706999599,
+      "windows": 90,
+      "train_windows": 72,
+      "validation_windows": 18,
+      "role": "train_validation"
+    },
+    {
+      "device_type": "Smart Speaker",
+      "device_id": "cic_echodot1",
+      "cutoff_us": 1633628231925113,
+      "windows": 79,
+      "train_windows": 62,
+      "validation_windows": 16,
+      "role": "train_validation"
+    },
+    {
+      "device_type": "Smart Speaker",
+      "device_id": "cic_echodot2",
+      "cutoff_us": 1633627751555959,
+      "windows": 106,
+      "train_windows": 83,
+      "validation_windows": 22,
+      "role": "train_validation"
+    },
+    {
+      "device_type": "Smart Speaker",
+      "device_id": "cic_echodot3",
+      "cutoff_us": 1633627845793861,
+      "windows": 15,
+      "train_windows": 11,
+      "validation_windows": 3,
+      "role": "train_validation"
+    },
+    {
+      "device_type": "Smart Speaker",
+      "device_id": "cic_echospot",
+      "cutoff_us": 1633629318863036,
+      "windows": 312,
+      "train_windows": 246,
+      "validation_windows": 63,
+      "role": "train_validation"
+    },
+    {
+      "device_type": "Smart Speaker",
+      "device_id": "cic_echostudio",
+      "cutoff_us": 1633628942414888,
+      "windows": 268,
+      "train_windows": 209,
+      "validation_windows": 54,
+      "role": "train_validation"
+    },
+    {
+      "device_type": "Smart Speaker",
+      "device_id": "cic_nestmini",
+      "cutoff_us": 1634054704431794,
+      "windows": 398,
+      "train_windows": 312,
+      "validation_windows": 80,
+      "role": "train_validation"
+    },
+    {
+      "device_type": "Smart Speaker",
+      "device_id": "cic_sonosone",
+      "cutoff_us": 1634128763756335,
+      "windows": 403,
+      "train_windows": 319,
+      "validation_windows": 81,
+      "role": "test"
+    }
+  ],
+  "counts": [
+    {
+      "split": "test",
+      "device_type": "IP Camera",
+      "windows": 1046,
+      "devices": 1
+    },
+    {
+      "split": "test",
+      "device_type": "Smart Bulb",
+      "windows": 254,
+      "devices": 1
+    },
+    {
+      "split": "test",
+      "device_type": "Smart Camera",
+      "windows": 380,
+      "devices": 1
+    },
+    {
+      "split": "test",
+      "device_type": "Smart Hub",
+      "windows": 821,
+      "devices": 1
+    },
+    {
+      "split": "test",
+      "device_type": "Smart Plug",
+      "windows": 90,
+      "devices": 1
+    },
+    {
+      "split": "test",
+      "device_type": "Smart Speaker",
+      "windows": 403,
+      "devices": 1
+    },
+    {
+      "split": "train",
+      "device_type": "IP Camera",
+      "windows": 4323,
+      "devices": 5
+    },
+    {
+      "split": "train",
+      "device_type": "Smart Bulb",
+      "windows": 307,
+      "devices": 2
+    },
+    {
+      "split": "train",
+      "device_type": "Smart Camera",
+      "windows": 2915,
+      "devices": 3
+    },
+    {
+      "split": "train",
+      "device_type": "Smart Hub",
+      "windows": 995,
+      "devices": 1
+    },
+    {
+      "split": "train",
+      "device_type": "Smart Plug",
+      "windows": 280,
+      "devices": 4
+    },
+    {
+      "split": "train",
+      "device_type": "Smart Speaker",
+      "windows": 923,
+      "devices": 6
+    },
+    {
+      "split": "validation",
+      "device_type": "IP Camera",
+      "windows": 1090,
+      "devices": 5
+    },
+    {
+      "split": "validation",
+      "device_type": "Smart Bulb",
+      "windows": 78,
+      "devices": 2
+    },
+    {
+      "split": "validation",
+      "device_type": "Smart Camera",
+      "windows": 733,
+      "devices": 3
+    },
+    {
+      "split": "validation",
+      "device_type": "Smart Hub",
+      "windows": 250,
+      "devices": 1
+    },
+    {
+      "split": "validation",
+      "device_type": "Smart Plug",
+      "windows": 71,
+      "devices": 4
+    },
+    {
+      "split": "validation",
+      "device_type": "Smart Speaker",
+      "windows": 238,
+      "devices": 6
+    }
+  ]
+}
