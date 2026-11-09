@@ -1,0 +1,287 @@
+{
+  "ordered_parquet_sha256": "1ca1ac58d3f8a53d7ea2a54dd1cbf1805549c8acbf7bd9f515efd0ff7d1d3177",
+  "classes": [
+    "Doorbell",
+    "IP Camera",
+    "Smart Camera",
+    "Smart Hub",
+    "Smart Plug",
+    "Smart Speaker"
+  ],
+  "target": "device_type",
+  "seed": 42,
+  "device": "cpu",
+  "threads": 4,
+  "epochs_limit": 5,
+  "batch_size": 256,
+  "optimizer": "Adam",
+  "learning_rate": 0.001,
+  "early_stopping_patience": 2,
+  "versions": {
+    "numpy": "2.5.4",
+    "polars": "2.1.0",
+    "torch": "2.15.0"
+  },
+  "history_length_including_target": 20,
+  "architecture": "causal_conv1d",
+  "channels": 32,
+  "kernel_size": 5,
+  "dilations": [
+    1,
+    4
+  ],
+  "receptive_field": 21,
+  "numeric_features": [
+    "total_packets",
+    "total_bytes",
+    "avg_packet_size",
+    "gap_seconds"
+  ],
+  "numeric_log_mean": [
+    1.483054757118225,
+    6.068344593048096,
+    4.945823669433594,
+    1.7253168821334839
+  ],
+  "numeric_log_scale": [
+    0.7353090643882751,
+    2.2227463722229004,
+    1.4018189907073975,
+    1.4687680006027222
+  ],
+  "port_features": [
+    "src_port",
+    "dst_port"
+  ],
+  "unordered_port_bucket_counts": false,
+  "protocols": [
+    "TCP",
+    "UDP",
+    "ICMP",
+    "OTHER"
+  ],
+  "train_per_class_limit": 20000,
+  "validation_per_class_limit": 4000,
+  "train_endpoint_counts": [
+    20000,
+    20000,
+    20000,
+    20000,
+    20000,
+    20000
+  ],
+  "validation_endpoint_counts": [
+    4000,
+    4000,
+    4000,
+    4000,
+    4000,
+    4000
+  ],
+  "models": {
+    "ordered": {
+      "best_epoch": 5,
+      "validation_macro_f1": 0.9818703849480803,
+      "epochs": [
+        {
+          "epoch": 1,
+          "loss": 0.26624658673206963,
+          "validation_macro_f1": 0.9577287173305634,
+          "validation_accuracy": 0.9577916666666667
+        },
+        {
+          "epoch": 2,
+          "loss": 0.0394837612648805,
+          "validation_macro_f1": 0.9587633055535618,
+          "validation_accuracy": 0.958875
+        },
+        {
+          "epoch": 3,
+          "loss": 0.024707702432076137,
+          "validation_macro_f1": 0.9647254794680115,
+          "validation_accuracy": 0.9647916666666667
+        },
+        {
+          "epoch": 4,
+          "loss": 0.018451783810183406,
+          "validation_macro_f1": 0.9683444078313399,
+          "validation_accuracy": 0.968375
+        },
+        {
+          "epoch": 5,
+          "loss": 0.014849020298322042,
+          "validation_macro_f1": 0.9818703849480803,
+          "validation_accuracy": 0.981875
+        }
+      ],
+      "test": {
+        "macro_f1": 0.19895750276564758,
+        "accuracy": 0.12890784341025058,
+        "per_class_f1": [
+          0.0,
+          0.49721633288082856,
+          3.447515031165536e-05,
+          0.6087278563051663,
+          0.0006565485244071914,
+          0.08710980373317172
+        ],
+        "confusion_matrix": [
+          [
+            0,
+            0,
+            535,
+            555,
+            0,
+            15
+          ],
+          [
+            26,
+            16299,
+            27,
+            51,
+            30991,
+            613
+          ],
+          [
+            0,
+            13,
+            5,
+            11207,
+            0,
+            16
+          ],
+          [
+            5578,
+            159,
+            158,
+            24655,
+            0,
+            12362
+          ],
+          [
+            382,
+            221,
+            59415,
+            279,
+            30,
+            25
+          ],
+          [
+            13093,
+            862,
+            218683,
+            1346,
+            14,
+            11786
+          ]
+        ]
+      }
+    },
+    "shuffled": {
+      "best_epoch": 5,
+      "validation_macro_f1": 0.9775635533509051,
+      "epochs": [
+        {
+          "epoch": 1,
+          "loss": 0.273986546766758,
+          "validation_macro_f1": 0.9525791536222518,
+          "validation_accuracy": 0.9527083333333334
+        },
+        {
+          "epoch": 2,
+          "loss": 0.04585943433443705,
+          "validation_macro_f1": 0.9612430446274391,
+          "validation_accuracy": 0.961375
+        },
+        {
+          "epoch": 3,
+          "loss": 0.030969953801234563,
+          "validation_macro_f1": 0.9638638579287573,
+          "validation_accuracy": 0.9639583333333334
+        },
+        {
+          "epoch": 4,
+          "loss": 0.02509087335690856,
+          "validation_macro_f1": 0.9650480703116747,
+          "validation_accuracy": 0.965125
+        },
+        {
+          "epoch": 5,
+          "loss": 0.02145754350324472,
+          "validation_macro_f1": 0.9775635533509051,
+          "validation_accuracy": 0.9775833333333334
+        }
+      ],
+      "test": {
+        "macro_f1": 0.19435660081186126,
+        "accuracy": 0.1316435475243099,
+        "per_class_f1": [
+          0.0,
+          0.3754717600341308,
+          2.749197577956934e-05,
+          0.697512810313765,
+          0.0017607145924589881,
+          0.09136682795503329
+        ],
+        "confusion_matrix": [
+          [
+            0,
+            0,
+            518,
+            549,
+            0,
+            38
+          ],
+          [
+            49,
+            11441,
+            46,
+            31,
+            32707,
+            3733
+          ],
+          [
+            1,
+            15,
+            4,
+            11201,
+            0,
+            20
+          ],
+          [
+            298,
+            256,
+            97,
+            29811,
+            0,
+            12450
+          ],
+          [
+            310,
+            155,
+            59290,
+            227,
+            82,
+            288
+          ],
+          [
+            11611,
+            1068,
+            219798,
+            747,
+            3,
+            12557
+          ]
+        ]
+      }
+    }
+  },
+  "test_endpoint_counts": [
+    1105,
+    48007,
+    11241,
+    42912,
+    60352,
+    245784
+  ]
+}

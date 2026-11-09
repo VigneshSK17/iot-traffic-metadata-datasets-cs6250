@@ -1,0 +1,182 @@
+{
+  "ordered_parquet_sha256": "1ca1ac58d3f8a53d7ea2a54dd1cbf1805549c8acbf7bd9f515efd0ff7d1d3177",
+  "classes": [
+    "IP Camera",
+    "Smart Camera",
+    "Smart Hub",
+    "Smart Plug",
+    "Smart Speaker"
+  ],
+  "target": "device_type",
+  "seed": 42,
+  "device": "cpu",
+  "threads": 4,
+  "epochs_limit": 8,
+  "batch_size": 256,
+  "optimizer": "Adam",
+  "learning_rate": 0.001,
+  "early_stopping_patience": null,
+  "versions": {
+    "numpy": "2.5.4",
+    "polars": "2.1.0",
+    "torch": "2.15.0"
+  },
+  "history_length_including_target": 20,
+  "architecture": "causal_conv1d",
+  "channels": 32,
+  "kernel_size": 5,
+  "dilations": [
+    1,
+    4
+  ],
+  "receptive_field": 21,
+  "numeric_features": [],
+  "numeric_log_mean": [],
+  "numeric_log_scale": [],
+  "port_features": [
+    "src_port",
+    "dst_port"
+  ],
+  "unordered_port_bucket_counts": true,
+  "protocols": [
+    "TCP",
+    "UDP",
+    "ICMP",
+    "OTHER"
+  ],
+  "train_per_class_limit": 5000,
+  "validation_per_class_limit": 2000,
+  "train_endpoint_counts": [
+    5000,
+    5000,
+    5000,
+    5000,
+    5000
+  ],
+  "validation_endpoint_counts": [
+    2000,
+    2000,
+    2000,
+    2000,
+    2000
+  ],
+  "models": {
+    "ordered": {
+      "best_epoch": 6,
+      "validation_macro_f1": 0.9528883679204169,
+      "epochs": [
+        {
+          "epoch": 1,
+          "loss": 1.0583437128772593,
+          "validation_macro_f1": 0.7771138169529823,
+          "validation_accuracy": 0.7826
+        },
+        {
+          "epoch": 2,
+          "loss": 0.5050675317155089,
+          "validation_macro_f1": 0.9377255877319068,
+          "validation_accuracy": 0.9378
+        },
+        {
+          "epoch": 3,
+          "loss": 0.3771451670925884,
+          "validation_macro_f1": 0.9356543602947177,
+          "validation_accuracy": 0.9358
+        },
+        {
+          "epoch": 4,
+          "loss": 0.32925169711361185,
+          "validation_macro_f1": 0.942596097931934,
+          "validation_accuracy": 0.9427
+        },
+        {
+          "epoch": 5,
+          "loss": 0.30429751773524927,
+          "validation_macro_f1": 0.9414299752777108,
+          "validation_accuracy": 0.9416
+        },
+        {
+          "epoch": 6,
+          "loss": 0.2892477445601568,
+          "validation_macro_f1": 0.9528883679204169,
+          "validation_accuracy": 0.9529
+        },
+        {
+          "epoch": 7,
+          "loss": 0.27622386191264925,
+          "validation_macro_f1": 0.9440761693760147,
+          "validation_accuracy": 0.9442
+        },
+        {
+          "epoch": 8,
+          "loss": 0.26643684820041186,
+          "validation_macro_f1": 0.9489740562856444,
+          "validation_accuracy": 0.949
+        }
+      ],
+      "test": {
+        "macro_f1": 0.23207492912961086,
+        "accuracy": 0.18944099378881987,
+        "per_class_f1": [
+          0.6970569444329204,
+          0.002626088360649468,
+          0.45108822451088226,
+          3.313123281317298e-05,
+          0.009570257110788908
+        ],
+        "confusion_matrix": [
+          [
+            42005,
+            5952,
+            32,
+            13,
+            5
+          ],
+          [
+            524,
+            309,
+            7201,
+            0,
+            3207
+          ],
+          [
+            8996,
+            27,
+            33835,
+            0,
+            54
+          ],
+          [
+            331,
+            765,
+            59144,
+            1,
+            111
+          ],
+          [
+            20658,
+            217037,
+            6891,
+            0,
+            1198
+          ]
+        ]
+      }
+    }
+  },
+  "cic_reference_sha256": "dd2a4e3ab0758fa195594754cacaa56a01b89ff1e8b631b17c96bb45d31fe32c",
+  "cic_training_endpoint_counts": [
+    3865,
+    2411,
+    1232,
+    264,
+    924
+  ],
+  "test_endpoint_counts": [
+    48007,
+    11241,
+    42912,
+    60352,
+    245784
+  ]
+}

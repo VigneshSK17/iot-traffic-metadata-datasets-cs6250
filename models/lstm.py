@@ -153,9 +153,9 @@ def predict(model, flows, ids, shuffled, batch_size, device, seed):
     return np.concatenate(predictions)
 
 
-def train_model(train, validation, train_ids, val_ids, n_classes, mode, args, device, extra_ids=None):
+def train_model(train, validation, train_ids, val_ids, n_classes, mode, args, device, extra_ids=None, *, model_factory=FlowLSTM):
     torch.manual_seed(args.seed)
-    model = FlowLSTM(train.features.shape[1], n_classes).to(device)
+    model = model_factory(train.features.shape[1], n_classes).to(device)
     optimizer = torch.optim.Adam(model.parameters(), lr=1e-3)
     criterion = nn.CrossEntropyLoss()
     batch_rng = np.random.default_rng(args.seed)
@@ -202,8 +202,8 @@ def train_model(train, validation, train_ids, val_ids, n_classes, mode, args, de
     return {"best_epoch": best_epoch, "validation_macro_f1": best_f1, "epochs": history}
 
 
-def main():
-    parser = argparse.ArgumentParser(description=__doc__)
+def main(*, model_factory=FlowLSTM, model_metadata=None, description=__doc__):
+    parser = argparse.ArgumentParser(description=description)
     parser.add_argument("ordered_parquet", type=Path)
     parser.add_argument("--output", type=Path, required=True)
     parser.add_argument("--cic-reference", type=Path, help="CIC ordered file for shared-label comparison")
@@ -279,7 +279,8 @@ def main():
         "epochs_limit": args.epochs, "batch_size": args.batch_size,
         "optimizer": "Adam", "learning_rate": 1e-3, "early_stopping_patience": None if shared else 2,
         "versions": {"numpy": np.__version__, "polars": pl.__version__, "torch": torch.__version__},
-        "history_length_including_target": HISTORY_LENGTH, "hidden_size": 64,
+        "history_length_including_target": HISTORY_LENGTH,
+        **({"hidden_size": 64} if model_metadata is None else model_metadata),
         "numeric_features": numeric_columns, "numeric_log_mean": mean.tolist(),
         "numeric_log_scale": scale.tolist(), "port_features": PORTS, "unordered_port_bucket_counts": shared, "protocols": PROTOCOLS,
         "train_per_class_limit": args.train_per_class,
@@ -299,7 +300,8 @@ def main():
     print(f"Training on {len(train_ids):,} endpoints, validating on {len(val_ids):,}", flush=True)
     for mode in modes:
         report["models"][mode] = train_model(
-            train, validation, train_ids, val_ids, len(classes), mode, args, device, extra_ids
+            train, validation, train_ids, val_ids, len(classes), mode, args, device, extra_ids,
+            model_factory=model_factory,
         )
         (args.output / "training.json").write_text(json.dumps(report, indent=2) + "\n")
 
@@ -314,7 +316,7 @@ def main():
     test_ids = np.arange(len(test.labels))
     results = {"flow_id": test.flow_ids, "actual": np.asarray(classes)[test.labels]}
     for mode in modes:
-        model = FlowLSTM(test.features.shape[1], len(classes)).to(device)
+        model = model_factory(test.features.shape[1], len(classes)).to(device)
         model.load_state_dict(torch.load(args.output / f"{mode}.pt", map_location=device, weights_only=True))
         predicted = predict(
             model, test, test_ids, mode == "shuffled", args.batch_size, device, args.seed + 30
